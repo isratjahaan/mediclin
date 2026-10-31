@@ -2,6 +2,7 @@
   "name": "mediclin",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "description": "MEDICLIN — Enterprise Multi-Tenant Hospital Management & Telemedicine SaaS Platform",
   "main": "api/index.js",
   "scripts": {
