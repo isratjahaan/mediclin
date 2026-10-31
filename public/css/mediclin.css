@@ -1,0 +1,273 @@
+/* ============================================================================
+   MEDICLIN Enterprise Design System
+   Color Tokens, Glassmorphism, Print Styles & Layout Grid
+   ============================================================================ */
+
+:root {
+  --primary-navy: #102E50;
+  --secondary-navy: #163B65;
+  --primary-teal: #0AA6A6;
+  --secondary-teal: #168C91;
+  --bg-main: #F5F8FC;
+  --surface: #FFFFFF;
+  --text-primary: #172B45;
+  --text-secondary: #718096;
+  --border-color: #E3EAF2;
+  --success: #16865B;
+  --warning: #D99A30;
+  --danger: #D94B4B;
+  --shadow-subtle: 0 4px 20px -2px rgba(16, 46, 80, 0.06);
+  --shadow-card: 0 10px 30px -4px rgba(16, 46, 80, 0.08);
+  --shadow-elevated: 0 20px 40px -6px rgba(16, 46, 80, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #EDF2F7;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E0;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-teal);
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--primary-navy);
+  color: #FFFFFF;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(16, 46, 80, 0.15);
+}
+.btn-primary:hover {
+  background: var(--secondary-navy);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(16, 46, 80, 0.22);
+}
+
+.btn-teal {
+  background: var(--primary-teal);
+  color: #FFFFFF;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(10, 166, 166, 0.25);
+}
+.btn-teal:hover {
+  background: var(--secondary-teal);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(10, 166, 166, 0.35);
+}
+
+.btn-outline {
+  background: var(--surface);
+  color: var(--primary-navy);
+  padding: 9px 20px;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.92rem;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+.btn-outline:hover {
+  border-color: var(--primary-teal);
+  color: var(--primary-teal);
+  background: #FAFDFD;
+}
+
+/* Cards */
+.mediclin-card {
+  background: var(--surface);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  box-shadow: var(--shadow-subtle);
+  transition: all 0.2s ease;
+}
+.mediclin-card:hover {
+  box-shadow: var(--shadow-card);
+}
+
+/* Badges */
+.badge-teal {
+  background: rgba(10, 166, 166, 0.1);
+  color: var(--primary-teal);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.badge-success {
+  background: rgba(22, 134, 91, 0.1);
+  color: var(--success);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.badge-warning {
+  background: rgba(217, 154, 48, 0.1);
+  color: var(--warning);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+.badge-danger {
+  background: rgba(217, 75, 75, 0.1);
+  color: var(--danger);
+  padding: 4px 10px;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+/* Tables */
+.mediclin-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 0.9rem;
+}
+.mediclin-table th {
+  background: #F8FAFD;
+  color: var(--text-secondary);
+  font-weight: 600;
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.mediclin-table td {
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-primary);
+  vertical-align: middle;
+}
+.mediclin-table tr:hover td {
+  background: #FBFDFF;
+}
+
+/* Modals */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(16, 46, 80, 0.45);
+  backdrop-filter: blur(4px);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.modal-panel {
+  background: #FFFFFF;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-elevated);
+  border: 1px solid var(--border-color);
+}
+
+/* Forms */
+.form-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 6px;
+}
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  background: #FFFFFF;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--primary-teal);
+  box-shadow: 0 0 0 3px rgba(10, 166, 166, 0.12);
+}
+
+/* Floating perspective mockup in hero */
+.mockup-perspective {
+  transform: perspective(1000px) rotateY(-4deg) rotateX(2deg);
+  transition: transform 0.4s ease;
+}
+.mockup-perspective:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
+/* Printable Digital Prescription */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-prescription, #printable-prescription * {
+    visibility: visible;
+  }
+  #printable-prescription {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

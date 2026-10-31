@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MEDICLIN — Hospital Management. Simplified. Multi-Tenant Healthcare SaaS</title>
+  <link rel="icon" type="image/png" href="/brand/mediclin-logo.png">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS & Lucide Icons -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brandNavy: '#102E50',
+            brandNavyLight: '#163B65',
+            brandTeal: '#0AA6A6',
+            brandTealDark: '#168C91',
+            brandBg: '#F5F8FC',
+            brandBorder: '#E3EAF2'
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- MEDICLIN Custom Design System -->
+  <link rel="stylesheet" href="/css/mediclin.css">
+</head>
+<body class="bg-[#F5F8FC] text-[#172B45] antialiased">
+  
+  <!-- Root App Shell -->
+  <div id="app" class="min-h-screen flex flex-col"></div>
+
+  <!-- Global Modal Mount -->
+  <div id="modal-root"></div>
+
+  <!-- Global Toast Mount -->
+  <div id="toast-root" class="fixed bottom-5 right-5 z-[99999] flex flex-col gap-2"></div>
+
+  <!-- Main Application Logic -->
+  <script src="/js/app.js"></script>
+</body>
+</html>

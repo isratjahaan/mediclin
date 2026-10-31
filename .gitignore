@@ -1,0 +1,24 @@
+# Dependencies & System
+node_modules/
+tools/
+git.cmd
+node.cmd
+.DS_Store
+Thumbs.db
+*.log
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build output & Temp
+dist/
+build/
+.cache/
+*.tmp
+
+# SQLite journal
+data/*.sqlite-journal
+data/*.sqlite-wal
+data/*.sqlite-shm
