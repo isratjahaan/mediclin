@@ -1,0 +1,21 @@
+{
+  "name": "mediclin",
+  "version": "1.0.0",
+  "private": true,
+  "description": "MEDICLIN — Enterprise Multi-Tenant Hospital Management & Telemedicine SaaS Platform",
+  "main": "api/index.js",
+  "scripts": {
+    "start": "node src/server.ts",
+    "test": "node --experimental-strip-types tests/mediclin.test.ts"
+  },
+  "keywords": [
+    "hospital-management",
+    "telemedicine",
+    "saas",
+    "multi-tenant",
+    "healthcare",
+    "bangladesh"
+  ],
+  "author": "isratjahaan",
+  "license": "MIT"
+}
