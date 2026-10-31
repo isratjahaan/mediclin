@@ -259,11 +259,27 @@ export default async function handler(req, res) {
   }
 
   const url = new URL(req.url, `https://${req.headers.host || 'mediclin.vercel.app'}`);
-  const pathname = url.pathname;
+  let pathname = url.searchParams.get('path') ? ('/api/' + url.searchParams.get('path')) : url.pathname;
+  if (!pathname.startsWith('/api')) {
+    pathname = '/api' + (pathname.startsWith('/') ? pathname : '/' + pathname);
+  }
+  if (pathname.endsWith('/') && pathname.length > 1) {
+    pathname = pathname.slice(0, -1);
+  }
 
   res.setHeader('Content-Type', 'application/json');
 
   try {
+    // Health Check / Root API
+    if (pathname === '/api' || pathname === '/api/health') {
+      return res.end(JSON.stringify({
+        success: true,
+        status: 'online',
+        platform: 'MEDICLIN Enterprise SaaS',
+        version: '1.0.0',
+        environment: 'Vercel Serverless Production'
+      }));
+    }
     // 1. Auth: Login
     if (pathname === '/api/auth/login') {
       return res.end(JSON.stringify({
