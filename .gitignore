@@ -3,6 +3,7 @@ node_modules/
 tools/
 git.cmd
 node.cmd
+push-to-github.cmd
 .DS_Store
 Thumbs.db
 *.log
